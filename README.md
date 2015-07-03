@@ -16,6 +16,7 @@ Have a look at the code to see how it works but it basically just pushes a conta
 ### Signup with [resin](https://resin.io)
 - Create an app
 - Download and install image
+- After booting your device it will pop up on your resin apps dashboard.
 - If you need more details follow this [link](http://docs.resin.io/#/pages/installing/gettingStarted.md)
 
 ### Push code
