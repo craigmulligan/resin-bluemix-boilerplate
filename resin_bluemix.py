@@ -5,10 +5,9 @@ import requests
 from requests.auth import HTTPBasicAuth
 from config import JWT, bluemix_api_key, bluemix_api_token, organization, device_type, resin_device_uuid
 
-# Gets device resource from resin
-
 
 def get_resin_device(uuid):
+    # Gets device resource from resin
     url = "https://api.resin.io/ewa/device?$filter=uuid%20eq%20'" + uuid + "'"
     headers = {'Content-type': 'application/json',
                'Authorization': 'Bearer ' + JWT}
@@ -20,11 +19,10 @@ def get_resin_device(uuid):
     else:
         print 'Error connecting to resin.io api, response code ' + str(r.status_code)
 
-# Creates device envar for bluemix device credentials, allowing config to
-# persist threw updates
-
 
 def create_device_envar(device_id, key, value):
+    # Creates device envar for bluemix device credentials, allowing config to
+    # persist threw updates
     url = "https://api.resin.io/ewa/device_environment_variable"
     data = {
         "device": device_id,
@@ -39,11 +37,9 @@ def create_device_envar(device_id, key, value):
     else:
         print 'Error creating resin.io envar ' + str(key) + ', response code ' + str(r.status_code)
 
-# registers device with bluemix using resin device ID
-
 
 def register(device):
-    # Make both our resin db and bluemix db have same id for devices
+    # registers device with bluemix using resin device ID
     url = "https://" + str(organization) + \
         ".internetofthings.ibmcloud.com/api/v0001/devices"
     data = {

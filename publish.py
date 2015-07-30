@@ -18,17 +18,16 @@ try:
     }
     client = ibmiotf.device.Client(options)
     client.connect()
-    print "Device connect to IBM IoT dashboard - https://" + organization + ".internetofthings.ibmcloud.com/dashboard/#/devices"
+    print "Device connected to IBM IoT dashboard - https://" + organization + ".internetofthings.ibmcloud.com/dashboard/#/devices"
 
 except ibmiotf.ConnectionException as e:
     print e
-
 
 # bluemix publish event
 while True:
     try:
         # Let's make some random values for our sensors
-        sensor_1 = random.random()å
+        sensor_1 = random.random()
         sensor_2 = random.random()
 
         # prefix data with 'd' to distinguish a device published event.
