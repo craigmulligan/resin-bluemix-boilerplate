@@ -60,7 +60,6 @@ The logs will print a link to your IBM IoT dashboard where you can manage your d
 IBM IoT Dashboard
 ![Imgur](http://i.imgur.com/aPm7XkM.png)
 
-
 ### Bonus 
 
 - If you would like to visualize your data, follow this ibm recipe.
